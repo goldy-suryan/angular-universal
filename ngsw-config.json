@@ -1,4 +1,5 @@
 {
+  "configVersion": 1,
   "index": "/index.html",
   "assetGroups": [
     {
@@ -14,6 +15,21 @@
       "updateMode": "prefetch",
       "resources": {
         "files": ["/assets/**"]
+      }
+    }
+  ],
+  "dataGroups": [
+    {
+      "name": "json-typicode",
+      "urls": [
+        "https://jsonplaceholder.typicode.com/todos/",
+        "http://localhost:4000/some"
+      ],
+      "cacheConfig": {
+        "maxSize": 20,
+        "maxAge": "3d",
+        "timeout": "5s",
+        "strategy": "freshness"
       }
     }
   ]
